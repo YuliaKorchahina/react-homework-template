@@ -1,0 +1,19 @@
+.list {
+    list-style: none;
+}
+
+.item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.remove {
+    color: tomato;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    top: 2px;
+    cursor: pointer;
+}
