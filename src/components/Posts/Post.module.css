@@ -1,0 +1,34 @@
+ul {
+    margin: 0;
+}
+
+.container {
+    padding: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.item {
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 15px;
+    text-align: center;
+    height: 150px;
+}

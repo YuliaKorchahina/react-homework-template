@@ -17,7 +17,24 @@ export class Books extends Component {
   state = {
     books: [],
     filter: '',
+    url: '',
   };
+
+  componentDidMount() {
+    const books = JSON.parse(localStorage.getItem('books'));
+    if (books?.length) {
+      this.setState({
+        books,
+      });
+    }
+  }
+
+  componentDidUpdate(_, prevState) {
+    const { books } = this.state;
+    if (prevState.books.length !== books.length) {
+      localStorage.setItem('books', JSON.stringify(books));
+    }
+  }
 
   addBook = data => {
     this.setState(prevState => {
@@ -51,7 +68,7 @@ export class Books extends Component {
   getFiltredBooks = () => {
     const { books, filter } = this.state;
 
-    if(!filter){
+    if (!filter) {
       return books;
     }
     const normalizedFilter = filter.toLocaleLowerCase();
